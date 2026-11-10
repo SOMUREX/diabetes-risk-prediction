@@ -21,3 +21,4 @@ EXPOSE 8000
 
 # Run uvicorn on 0.0.0.0 with dynamic $PORT support
 CMD uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}
+

@@ -2,25 +2,26 @@
 
 > **Academic Final-Year Capstone Project — Review III Demonstration**  
 > **Project Title:** *Inherited-Susceptibility–Aware Lifestyle Risk Modelling for Personalized Type-2 Diabetes Prediction Using Machine Learning and Deep Learning*  
-> **GitHub Repository:** [https://github.com/SOMUREX/diabetes-risk-prediction](https://github.com/SOMUREX/diabetes-risk-prediction)
+> 🚀 **Live Production Website:** [https://diabetes-risk-prediction-nsng.onrender.com/](https://diabetes-risk-prediction-nsng.onrender.com/)  
+> 📂 **GitHub Repository:** [https://github.com/SOMUREX/diabetes-risk-prediction](https://github.com/SOMUREX/diabetes-risk-prediction)
 
 ---
 
-## 🌐 Application Access & Live Deployment Links
+## 🌐 Live Application & Access Links
 
-> [!NOTE]  
-> **How to Access the Live Application:**
-> - **Local Access:** The links below run locally on your machine. To activate them, run **`python run.py`** in your project folder (or double-click **`run_all.bat`**). The application will automatically launch and open in your default browser.
-> - **Why did `localhost refused to connect` happen?** `localhost` runs on your physical machine. If the Python backend process is not actively running, your browser cannot reach it. Starting `python run.py` or `run_all.bat` starts the server and solves this immediately.
-> - **Public Cloud Deployment:** If you want a 24/7 public `https://...` link for external reviewers without keeping your computer on, deploy this repository directly to [Render](https://render.com) (free) or Hugging Face Spaces using the included `Dockerfile` and `render.yaml`.
+[![Live Web Application](https://img.shields.io/badge/Render-Live%20Website-brightgreen?style=for-the-badge&logo=render)](https://diabetes-risk-prediction-nsng.onrender.com/)
+[![Interactive Swagger Docs](https://img.shields.io/badge/FastAPI-Swagger%20Docs-009688?style=for-the-badge&logo=fastapi)](https://diabetes-risk-prediction-nsng.onrender.com/docs)
+[![System Health Check](https://img.shields.io/badge/Health%20API-Online-success?style=for-the-badge)](https://diabetes-risk-prediction-nsng.onrender.com/api/health)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/SOMUREX/diabetes-risk-prediction)
 
 | Service | Access Link | Description |
 | :--- | :--- | :--- |
-| **Unified Web Application (Local)** | **[http://localhost:8000](http://localhost:8000)** | Full React UI + FastAPI backend bundled on a single port |
-| **Interactive API Documentation** | **[http://localhost:8000/docs](http://localhost:8000/docs)** | Interactive Swagger UI for testing predictions & endpoints |
-| **System Health Check API** | **[http://localhost:8000/api/health](http://localhost:8000/api/health)** | Live pipeline JSON verification status |
-| **React Development Server** | **[http://localhost:3000](http://localhost:3000)** | Vite frontend server with hot reload |
-| **GitHub Source Code** | **[https://github.com/SOMUREX/diabetes-risk-prediction](https://github.com/SOMUREX/diabetes-risk-prediction)** | Full open-source repository & research notebooks |
+| 🚀 **Live Cloud Web Application** | **[https://diabetes-risk-prediction-nsng.onrender.com/](https://diabetes-risk-prediction-nsng.onrender.com/)** | **24/7 Production Deployment (Hosted on Render)** — Accessible from any phone, tablet, or PC worldwide |
+| 📑 **Live Cloud API Documentation** | **[https://diabetes-risk-prediction-nsng.onrender.com/docs](https://diabetes-risk-prediction-nsng.onrender.com/docs)** | Interactive Swagger UI for live model prediction endpoints |
+| 🩺 **Live Cloud Health Check** | **[https://diabetes-risk-prediction-nsng.onrender.com/api/health](https://diabetes-risk-prediction-nsng.onrender.com/api/health)** | Live pipeline JSON verification status & 7,000 cohort stats |
+| 💻 **Local Web Application** | **[http://localhost:8000](http://localhost:8000)** | Local unified instance (run `python run.py` or `run_all.bat`) |
+| ⚡ **Local React Dev Server** | **[http://localhost:3000](http://localhost:3000)** | Vite frontend development server with hot-module reload |
+| 🐙 **GitHub Source Code** | **[https://github.com/SOMUREX/diabetes-risk-prediction](https://github.com/SOMUREX/diabetes-risk-prediction)** | Full open-source repository & research notebooks |
 
 ---
 

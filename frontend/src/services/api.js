@@ -2,10 +2,8 @@
  * API Service for Communicating with FastAPI Backend
  */
 
-// Seamless integration: Works with Vite proxy, direct FastAPI serving, and external domains
-const API_BASE_URL = typeof window !== 'undefined' && window.location.port === '3000'
-  ? '/api'
-  : (typeof window !== 'undefined' && window.location.origin.includes('8000') ? '/api' : 'http://127.0.0.1:8000/api');
+// Seamless integration: Works with Vite proxy, direct FastAPI serving, and cloud deployments (e.g. Render)
+const API_BASE_URL = '/api';
 
 export const fetchHealth = async () => {
   try {
