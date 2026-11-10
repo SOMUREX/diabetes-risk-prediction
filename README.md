@@ -6,17 +6,34 @@
 
 ---
 
-## 🌐 Live Application & Access Links
+## 🌐 Application Access & Live Deployment Links
+
+> [!NOTE]  
+> **How to Access the Live Application:**
+> - **Local Access:** The links below run locally on your machine. To activate them, run **`python run.py`** in your project folder (or double-click **`run_all.bat`**). The application will automatically launch and open in your default browser.
+> - **Why did `localhost refused to connect` happen?** `localhost` runs on your physical machine. If the Python backend process is not actively running, your browser cannot reach it. Starting `python run.py` or `run_all.bat` starts the server and solves this immediately.
+> - **Public Cloud Deployment:** If you want a 24/7 public `https://...` link for external reviewers without keeping your computer on, deploy this repository directly to [Render](https://render.com) (free) or Hugging Face Spaces using the included `Dockerfile` and `render.yaml`.
 
 | Service | Access Link | Description |
 | :--- | :--- | :--- |
-| **Integrated Web Application** | [http://localhost:8000](http://localhost:8000) | Complete unified UI (React + FastAPI) running on a single port |
-| **React Development Server** | [http://localhost:3000](http://localhost:3000) | Vite frontend with hot-module reload & API proxying |
-| **Interactive API Documentation** | [http://localhost:8000/docs](http://localhost:8000/docs) | Live Swagger UI for testing all prediction endpoints |
-| **System Health Check** | [http://localhost:8000/api/health](http://localhost:8000/api/health) | Live JSON health & pipeline verification endpoint |
-| **GitHub Source Code** | [https://github.com/SOMUREX/diabetes-risk-prediction](https://github.com/SOMUREX/diabetes-risk-prediction) | Public source code, datasets, model weights & notebooks |
+| **Unified Web Application (Local)** | **[http://localhost:8000](http://localhost:8000)** | Full React UI + FastAPI backend bundled on a single port |
+| **Interactive API Documentation** | **[http://localhost:8000/docs](http://localhost:8000/docs)** | Interactive Swagger UI for testing predictions & endpoints |
+| **System Health Check API** | **[http://localhost:8000/api/health](http://localhost:8000/api/health)** | Live pipeline JSON verification status |
+| **React Development Server** | **[http://localhost:3000](http://localhost:3000)** | Vite frontend server with hot reload |
+| **GitHub Source Code** | **[https://github.com/SOMUREX/diabetes-risk-prediction](https://github.com/SOMUREX/diabetes-risk-prediction)** | Full open-source repository & research notebooks |
 
-*(When deployed to cloud services such as Render, Railway, or Hugging Face Spaces, replace `localhost` with your production URL, e.g. `https://diabetes-risk-ai.onrender.com`)*
+---
+
+### ⚡ 1-Click Launch Instructions (Quickstart)
+
+```powershell
+# Method 1: Python Universal Launcher (Recommended - starts server and auto-opens browser)
+python run.py
+
+# Method 2: Windows Batch Launcher (Double-click in File Explorer or run in terminal)
+.\run_all.bat
+```
+*(Once started, visit **http://localhost:8000** in your browser)*
 
 ---
 
