@@ -1,0 +1,391 @@
+{
+  "dataset_metadata": {
+    "dataset_name": "Synthetic Type-2 Diabetes Multi-Modal Research Cohort",
+    "total_participants": 7000,
+    "is_synthetic": true,
+    "features_count": 44,
+    "target_variable": "type2_diabetes",
+    "target_distribution": {
+      "negative_non_diabetic": {
+        "count": 5983,
+        "percentage": 85.47
+      },
+      "positive_diabetic": {
+        "count": 1017,
+        "percentage": 14.53
+      }
+    }
+  },
+  "demographic_distributions": {
+    "age_distribution": [
+      {
+        "group": "<30",
+        "count": 859,
+        "diabetes_rate": 4.77
+      },
+      {
+        "group": "30-45",
+        "count": 2316,
+        "diabetes_rate": 9.67
+      },
+      {
+        "group": "46-60",
+        "count": 2644,
+        "diabetes_rate": 16.07
+      },
+      {
+        "group": "60+",
+        "count": 1181,
+        "diabetes_rate": 27.69
+      }
+    ],
+    "sex_distribution": [
+      {
+        "sex": "Female",
+        "count": 3571,
+        "diabetes_rate": 14.17
+      },
+      {
+        "sex": "Male",
+        "count": 3429,
+        "diabetes_rate": 14.9
+      }
+    ],
+    "race_ethnicity_distribution": [
+      {
+        "race": "Black",
+        "count": 822,
+        "diabetes_rate": 13.5
+      },
+      {
+        "race": "East Asian",
+        "count": 809,
+        "diabetes_rate": 13.97
+      },
+      {
+        "race": "Hispanic",
+        "count": 656,
+        "diabetes_rate": 17.84
+      },
+      {
+        "race": "Other",
+        "count": 258,
+        "diabetes_rate": 15.12
+      },
+      {
+        "race": "South Asian",
+        "count": 2899,
+        "diabetes_rate": 14.38
+      },
+      {
+        "race": "White",
+        "count": 1556,
+        "diabetes_rate": 14.14
+      }
+    ]
+  },
+  "genetic_family_distributions": {
+    "genetic_risk_categories": [
+      {
+        "category": "High",
+        "count": 1746,
+        "diabetes_rate": 23.94
+      },
+      {
+        "category": "Low",
+        "count": 1752,
+        "diabetes_rate": 6.91
+      },
+      {
+        "category": "Medium",
+        "count": 3502,
+        "diabetes_rate": 13.65
+      }
+    ],
+    "family_history": {
+      "mother_diabetes": 843,
+      "father_diabetes": 772,
+      "sibling_diabetes": 424,
+      "grandparent_diabetes": 1286,
+      "any_family_history": 2708,
+      "relatives_count_distribution": {
+        "0": 4292,
+        "1": 2163,
+        "2": 475,
+        "3": 68,
+        "4": 2
+      }
+    }
+  },
+  "lifestyle_clinical_distributions": {
+    "bmi_distribution": [
+      {
+        "category": "Underweight (<18.5)",
+        "count": 286,
+        "diabetes_rate": 1.4
+      },
+      {
+        "category": "Normal (18.5-24.9)",
+        "count": 3896,
+        "diabetes_rate": 7.62
+      },
+      {
+        "category": "Overweight (25-29.9)",
+        "count": 2477,
+        "diabetes_rate": 23.25
+      },
+      {
+        "category": "Obese (\u226530)",
+        "count": 252,
+        "diabetes_rate": 49.6
+      }
+    ],
+    "physical_activity_distribution": [
+      {
+        "group": "Sedentary (<60 min)",
+        "count": 1456,
+        "diabetes_rate": 19.02
+      },
+      {
+        "group": "Low (60-149 min)",
+        "count": 2319,
+        "diabetes_rate": 15.05
+      },
+      {
+        "group": "Moderate (150-299 min)",
+        "count": 2563,
+        "diabetes_rate": 12.56
+      },
+      {
+        "group": "High (\u2265300 min)",
+        "count": 514,
+        "diabetes_rate": 8.95
+      }
+    ],
+    "sleep_distribution": [
+      {
+        "group": "Short (<6h)",
+        "count": 1071,
+        "diabetes_rate": 16.34
+      },
+      {
+        "group": "Slightly Short (6-7h)",
+        "count": 2550,
+        "diabetes_rate": 14.98
+      },
+      {
+        "group": "Optimal (7-9h)",
+        "count": 3266,
+        "diabetes_rate": 13.78
+      },
+      {
+        "group": "Long (>9h)",
+        "count": 113,
+        "diabetes_rate": 8.85
+      }
+    ],
+    "smoking_distribution": [
+      {
+        "status": "Current",
+        "count": 907,
+        "diabetes_rate": 14.11
+      },
+      {
+        "status": "Former",
+        "count": 1045,
+        "diabetes_rate": 15.69
+      },
+      {
+        "status": "Never",
+        "count": 5048,
+        "diabetes_rate": 14.36
+      }
+    ]
+  },
+  "sample_profiles": [
+    {
+      "id": "profile_low_risk",
+      "name": "Low Risk Profile (Young & Active)",
+      "description": "Young adult with low PRS, healthy lifestyle, normal BMI, and no family diabetes history.",
+      "data": {
+        "age": 28,
+        "sex": "Female",
+        "race_ethnicity": "White",
+        "education_level": "Undergraduate",
+        "income_level": "High",
+        "t2d_prs": -1.25,
+        "prs_percentile": 12.0,
+        "genetic_risk_category": "Low",
+        "mother_diabetes": 0,
+        "father_diabetes": 0,
+        "sibling_diabetes": 0,
+        "grandparent_diabetes": 0,
+        "family_diabetes_history": 0,
+        "num_affected_relatives": 0,
+        "family_history_score": 0.0,
+        "physical_activity_minutes_week": 240,
+        "moderate_activity_days": 4,
+        "vigorous_activity_days": 2,
+        "sedentary_hours_day": 4.5,
+        "sleep_duration_hours": 7.5,
+        "sleep_quality_score": 85,
+        "fruit_intake": 3.0,
+        "vegetable_intake": 3.5,
+        "whole_grain_intake": 2.5,
+        "processed_food_frequency": 1.0,
+        "sugary_drink_frequency": 0.0,
+        "diet_quality_score": 82.0,
+        "smoking_status": "Never",
+        "smoking_pack_years": 0.0,
+        "alcohol_use": 1,
+        "alcohol_frequency": "Social",
+        "stress_level": 25,
+        "bmi": 21.8,
+        "waist_circumference": 74.0,
+        "systolic_bp": 115,
+        "diastolic_bp": 72,
+        "cholesterol": 175.0,
+        "triglycerides": 95.0,
+        "hypertension": 0
+      }
+    },
+    {
+      "id": "profile_high_risk",
+      "name": "High Risk Profile (GxE Interaction & Clinical Elevated)",
+      "description": "Older adult with elevated polygenic risk score (High PRS), strong family history, obesity, sedentary routine, and poor diet.",
+      "data": {
+        "age": 62,
+        "sex": "Male",
+        "race_ethnicity": "South Asian",
+        "education_level": "Secondary",
+        "income_level": "Low",
+        "t2d_prs": 1.85,
+        "prs_percentile": 94.5,
+        "genetic_risk_category": "High",
+        "mother_diabetes": 1,
+        "father_diabetes": 1,
+        "sibling_diabetes": 1,
+        "grandparent_diabetes": 1,
+        "family_diabetes_history": 1,
+        "num_affected_relatives": 4,
+        "family_history_score": 3.5,
+        "physical_activity_minutes_week": 30,
+        "moderate_activity_days": 1,
+        "vigorous_activity_days": 0,
+        "sedentary_hours_day": 10.5,
+        "sleep_duration_hours": 5.5,
+        "sleep_quality_score": 40,
+        "fruit_intake": 0.5,
+        "vegetable_intake": 1.0,
+        "whole_grain_intake": 0.5,
+        "processed_food_frequency": 5.0,
+        "sugary_drink_frequency": 4.0,
+        "diet_quality_score": 32.0,
+        "smoking_status": "Current",
+        "smoking_pack_years": 18.0,
+        "alcohol_use": 1,
+        "alcohol_frequency": "Frequent",
+        "stress_level": 78,
+        "bmi": 34.2,
+        "waist_circumference": 108.0,
+        "systolic_bp": 145,
+        "diastolic_bp": 92,
+        "cholesterol": 240.0,
+        "triglycerides": 230.0,
+        "hypertension": 1
+      }
+    },
+    {
+      "id": "profile_gxe_mitigation",
+      "name": "High Genetic Risk with Protective Lifestyle (Gene-Environment Mitigation)",
+      "description": "Participant with high polygenic risk score whose elevated genetic susceptibility is mitigated by rigorous exercise, optimal diet, and healthy weight.",
+      "data": {
+        "age": 45,
+        "sex": "Female",
+        "race_ethnicity": "East Asian",
+        "education_level": "Postgraduate",
+        "income_level": "Middle",
+        "t2d_prs": 1.62,
+        "prs_percentile": 92.0,
+        "genetic_risk_category": "High",
+        "mother_diabetes": 1,
+        "father_diabetes": 0,
+        "sibling_diabetes": 0,
+        "grandparent_diabetes": 1,
+        "family_diabetes_history": 1,
+        "num_affected_relatives": 2,
+        "family_history_score": 1.5,
+        "physical_activity_minutes_week": 320,
+        "moderate_activity_days": 5,
+        "vigorous_activity_days": 3,
+        "sedentary_hours_day": 4.0,
+        "sleep_duration_hours": 8.0,
+        "sleep_quality_score": 90,
+        "fruit_intake": 3.5,
+        "vegetable_intake": 4.0,
+        "whole_grain_intake": 3.0,
+        "processed_food_frequency": 0.5,
+        "sugary_drink_frequency": 0.0,
+        "diet_quality_score": 90.0,
+        "smoking_status": "Never",
+        "smoking_pack_years": 0.0,
+        "alcohol_use": 1,
+        "alcohol_frequency": "Rare",
+        "stress_level": 30,
+        "bmi": 22.4,
+        "waist_circumference": 72.0,
+        "systolic_bp": 118,
+        "diastolic_bp": 74,
+        "cholesterol": 180.0,
+        "triglycerides": 105.0,
+        "hypertension": 0
+      }
+    },
+    {
+      "id": "profile_average_adult",
+      "name": "Median Population Profile (Average Adult)",
+      "description": "Middle-aged participant with average demographic, genetic, lifestyle, and clinical characteristics.",
+      "data": {
+        "age": 48,
+        "sex": "Male",
+        "race_ethnicity": "White",
+        "education_level": "Undergraduate",
+        "income_level": "Middle",
+        "t2d_prs": 0.05,
+        "prs_percentile": 51.0,
+        "genetic_risk_category": "Medium",
+        "mother_diabetes": 0,
+        "father_diabetes": 1,
+        "sibling_diabetes": 0,
+        "grandparent_diabetes": 0,
+        "family_diabetes_history": 1,
+        "num_affected_relatives": 1,
+        "family_history_score": 1.0,
+        "physical_activity_minutes_week": 150,
+        "moderate_activity_days": 3,
+        "vigorous_activity_days": 1,
+        "sedentary_hours_day": 7.0,
+        "sleep_duration_hours": 7.0,
+        "sleep_quality_score": 65,
+        "fruit_intake": 2.0,
+        "vegetable_intake": 2.0,
+        "whole_grain_intake": 1.5,
+        "processed_food_frequency": 2.5,
+        "sugary_drink_frequency": 1.5,
+        "diet_quality_score": 55.0,
+        "smoking_status": "Former",
+        "smoking_pack_years": 4.0,
+        "alcohol_use": 1,
+        "alcohol_frequency": "Social",
+        "stress_level": 50,
+        "bmi": 26.8,
+        "waist_circumference": 88.0,
+        "systolic_bp": 126,
+        "diastolic_bp": 80,
+        "cholesterol": 198.0,
+        "triglycerides": 145.0,
+        "hypertension": 0
+      }
+    }
+  ]
+}

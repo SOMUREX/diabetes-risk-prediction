@@ -1,0 +1,308 @@
+{
+  "champion_model": "Logistic Regression (E5)",
+  "best_hyperparameters": {
+    "C": 0.01,
+    "penalty": "l2",
+    "max_iter": 1000,
+    "solver": "lbfgs"
+  },
+  "optimal_decision_threshold": 0.279417,
+  "validation_metrics": {
+    "roc_auc": 0.823617,
+    "pr_auc": 0.484813,
+    "brier_score": 0.09833
+  },
+  "test_metrics": {
+    "roc_auc": 0.78403,
+    "pr_auc": 0.411914,
+    "brier_score": 0.10529
+  },
+  "intercept": -2.246663,
+  "feature_coefficients": [
+    {
+      "feature": "bmi",
+      "coefficient": 0.444486,
+      "abs_coefficient": 0.444486
+    },
+    {
+      "feature": "obesity_age_score",
+      "coefficient": 0.319308,
+      "abs_coefficient": 0.319308
+    },
+    {
+      "feature": "waist_circumference",
+      "coefficient": 0.205154,
+      "abs_coefficient": 0.205154
+    },
+    {
+      "feature": "age",
+      "coefficient": 0.189395,
+      "abs_coefficient": 0.189395
+    },
+    {
+      "feature": "prs_percentile",
+      "coefficient": 0.155613,
+      "abs_coefficient": 0.155613
+    },
+    {
+      "feature": "gxe_diet_quality",
+      "coefficient": -0.154883,
+      "abs_coefficient": 0.154883
+    },
+    {
+      "feature": "t2d_prs",
+      "coefficient": 0.144738,
+      "abs_coefficient": 0.144738
+    },
+    {
+      "feature": "sugary_drink_frequency",
+      "coefficient": 0.110616,
+      "abs_coefficient": 0.110616
+    },
+    {
+      "feature": "triglycerides",
+      "coefficient": 0.108396,
+      "abs_coefficient": 0.108396
+    },
+    {
+      "feature": "race_ethnicity_Hispanic",
+      "coefficient": 0.102224,
+      "abs_coefficient": 0.102224
+    },
+    {
+      "feature": "num_affected_relatives",
+      "coefficient": 0.100785,
+      "abs_coefficient": 0.100785
+    },
+    {
+      "feature": "smoking_status_Never",
+      "coefficient": -0.100311,
+      "abs_coefficient": 0.100311
+    },
+    {
+      "feature": "family_history_score",
+      "coefficient": 0.0941,
+      "abs_coefficient": 0.0941
+    },
+    {
+      "feature": "smoking_pack_years",
+      "coefficient": -0.092622,
+      "abs_coefficient": 0.092622
+    },
+    {
+      "feature": "diet_quality_score",
+      "coefficient": -0.087689,
+      "abs_coefficient": 0.087689
+    },
+    {
+      "feature": "father_diabetes",
+      "coefficient": 0.087555,
+      "abs_coefficient": 0.087555
+    },
+    {
+      "feature": "race_ethnicity_Black",
+      "coefficient": -0.082311,
+      "abs_coefficient": 0.082311
+    },
+    {
+      "feature": "gxe_physical_activity",
+      "coefficient": -0.078575,
+      "abs_coefficient": 0.078575
+    },
+    {
+      "feature": "gxe_sleep_duration",
+      "coefficient": -0.075018,
+      "abs_coefficient": 0.075018
+    },
+    {
+      "feature": "vegetable_intake",
+      "coefficient": -0.073076,
+      "abs_coefficient": 0.073076
+    },
+    {
+      "feature": "gxe_bmi",
+      "coefficient": -0.063105,
+      "abs_coefficient": 0.063105
+    },
+    {
+      "feature": "mother_diabetes",
+      "coefficient": 0.061917,
+      "abs_coefficient": 0.061917
+    },
+    {
+      "feature": "smoking_status_Current",
+      "coefficient": 0.059012,
+      "abs_coefficient": 0.059012
+    },
+    {
+      "feature": "diastolic_bp",
+      "coefficient": 0.052837,
+      "abs_coefficient": 0.052837
+    },
+    {
+      "feature": "grandparent_diabetes",
+      "coefficient": 0.047385,
+      "abs_coefficient": 0.047385
+    },
+    {
+      "feature": "sleep_quality_score",
+      "coefficient": -0.045145,
+      "abs_coefficient": 0.045145
+    },
+    {
+      "feature": "smoking_status_Former",
+      "coefficient": 0.040963,
+      "abs_coefficient": 0.040963
+    },
+    {
+      "feature": "sedentary_hours_day",
+      "coefficient": 0.038231,
+      "abs_coefficient": 0.038231
+    },
+    {
+      "feature": "moderate_activity_days",
+      "coefficient": -0.036861,
+      "abs_coefficient": 0.036861
+    },
+    {
+      "feature": "sleep_to_sedentary_ratio",
+      "coefficient": -0.027807,
+      "abs_coefficient": 0.027807
+    },
+    {
+      "feature": "genetic_risk_category_High",
+      "coefficient": 0.026661,
+      "abs_coefficient": 0.026661
+    },
+    {
+      "feature": "stress_level",
+      "coefficient": 0.026333,
+      "abs_coefficient": 0.026333
+    },
+    {
+      "feature": "race_ethnicity_White",
+      "coefficient": -0.025893,
+      "abs_coefficient": 0.025893
+    },
+    {
+      "feature": "sex_Female",
+      "coefficient": -0.023476,
+      "abs_coefficient": 0.023476
+    },
+    {
+      "feature": "fruit_intake",
+      "coefficient": -0.023349,
+      "abs_coefficient": 0.023349
+    },
+    {
+      "feature": "sex_Male",
+      "coefficient": 0.023141,
+      "abs_coefficient": 0.023141
+    },
+    {
+      "feature": "processed_food_frequency",
+      "coefficient": -0.020748,
+      "abs_coefficient": 0.020748
+    },
+    {
+      "feature": "cardiovascular_risk_index",
+      "coefficient": 0.020667,
+      "abs_coefficient": 0.020667
+    },
+    {
+      "feature": "alcohol_use",
+      "coefficient": -0.020311,
+      "abs_coefficient": 0.020311
+    },
+    {
+      "feature": "whole_grain_intake",
+      "coefficient": 0.020168,
+      "abs_coefficient": 0.020168
+    },
+    {
+      "feature": "diet_activity_synergy",
+      "coefficient": -0.019517,
+      "abs_coefficient": 0.019517
+    },
+    {
+      "feature": "cholesterol",
+      "coefficient": 0.018975,
+      "abs_coefficient": 0.018975
+    },
+    {
+      "feature": "hypertension",
+      "coefficient": 0.016632,
+      "abs_coefficient": 0.016632
+    },
+    {
+      "feature": "sleep_duration_hours",
+      "coefficient": -0.016321,
+      "abs_coefficient": 0.016321
+    },
+    {
+      "feature": "genetic_risk_category_Low",
+      "coefficient": -0.015781,
+      "abs_coefficient": 0.015781
+    },
+    {
+      "feature": "education_level",
+      "coefficient": 0.011411,
+      "abs_coefficient": 0.011411
+    },
+    {
+      "feature": "genetic_risk_category_Medium",
+      "coefficient": -0.011216,
+      "abs_coefficient": 0.011216
+    },
+    {
+      "feature": "physical_activity_minutes_week",
+      "coefficient": -0.009631,
+      "abs_coefficient": 0.009631
+    },
+    {
+      "feature": "income_level",
+      "coefficient": 0.00752,
+      "abs_coefficient": 0.00752
+    },
+    {
+      "feature": "family_diabetes_history",
+      "coefficient": -0.007327,
+      "abs_coefficient": 0.007327
+    },
+    {
+      "feature": "vigorous_activity_days",
+      "coefficient": 0.007228,
+      "abs_coefficient": 0.007228
+    },
+    {
+      "feature": "race_ethnicity_Other",
+      "coefficient": 0.005903,
+      "abs_coefficient": 0.005903
+    },
+    {
+      "feature": "systolic_bp",
+      "coefficient": -0.004841,
+      "abs_coefficient": 0.004841
+    },
+    {
+      "feature": "sibling_diabetes",
+      "coefficient": 0.004775,
+      "abs_coefficient": 0.004775
+    },
+    {
+      "feature": "race_ethnicity_East Asian",
+      "coefficient": -0.002144,
+      "abs_coefficient": 0.002144
+    },
+    {
+      "feature": "race_ethnicity_South Asian",
+      "coefficient": 0.001885,
+      "abs_coefficient": 0.001885
+    },
+    {
+      "feature": "alcohol_frequency",
+      "coefficient": 0.000335,
+      "abs_coefficient": 0.000335
+    }
+  ]
+}

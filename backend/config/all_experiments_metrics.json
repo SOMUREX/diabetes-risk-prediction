@@ -1,0 +1,546 @@
+{
+  "experiments": {
+    "E1": {
+      "name": "E1: Lifestyle, Demographic & Clinical Model",
+      "code": "E1",
+      "description": "Baseline model trained strictly on modifiable lifestyle, demographic, and clinical variables, completely omitting genetic risk and family history.",
+      "features_included": [
+        "Demographic (Age, Sex, Race, Edu, Income)",
+        "Lifestyle (Physical Activity, Diet, Sleep, Smoking, Alcohol, Stress)",
+        "Clinical (BMI, BP, Waist, Lipids)"
+      ],
+      "features_excluded": [
+        "t2d_prs",
+        "prs_percentile",
+        "genetic_risk_category",
+        "mother_diabetes",
+        "father_diabetes",
+        "sibling_diabetes",
+        "grandparent_diabetes",
+        "family_diabetes_history",
+        "num_affected_relatives",
+        "family_history_score"
+      ],
+      "engineered_features": "None",
+      "interactions": "None",
+      "models": {
+        "Logistic Regression": {
+          "val_auc": 0.7885,
+          "val_pr": 0.4061,
+          "val_brier": 0.1053,
+          "threshold": 0.2093,
+          "test_auc": 0.7448,
+          "test_pr": 0.3897,
+          "test_brier": 0.1091,
+          "best_params": {
+            "C": 0.1,
+            "penalty": "l2"
+          }
+        },
+        "Random Forest": {
+          "val_auc": 0.7776,
+          "val_pr": 0.3959,
+          "val_brier": 0.1083,
+          "threshold": 0.1654,
+          "test_auc": 0.7306,
+          "test_pr": 0.3512,
+          "test_brier": 0.1118,
+          "best_params": {
+            "max_depth": 5,
+            "min_samples_split": 2,
+            "n_estimators": 100
+          }
+        },
+        "XGBoost": {
+          "val_auc": 0.7821,
+          "val_pr": 0.3985,
+          "val_brier": 0.1073,
+          "threshold": 0.1793,
+          "test_auc": 0.7452,
+          "test_pr": 0.3681,
+          "test_brier": 0.1101,
+          "best_params": {
+            "learning_rate": 0.01,
+            "max_depth": 3,
+            "n_estimators": 100
+          }
+        },
+        "LightGBM": {
+          "val_auc": 0.7836,
+          "val_pr": 0.3973,
+          "val_brier": 0.1071,
+          "threshold": 0.1808,
+          "test_auc": 0.7442,
+          "test_pr": 0.3628,
+          "test_brier": 0.1104,
+          "best_params": {
+            "learning_rate": 0.01,
+            "max_depth": 3,
+            "n_estimators": 100
+          }
+        },
+        "MLP": {
+          "val_auc": 0.6865,
+          "val_pr": 0.2759,
+          "val_brier": 0.1765,
+          "threshold": 0.0016,
+          "test_auc": 0.6448,
+          "test_pr": 0.2261,
+          "test_brier": 0.1913,
+          "best_params": {
+            "alpha": 0.001,
+            "hidden_layer_sizes": [
+              64,
+              32
+            ],
+            "learning_rate_init": 0.01
+          }
+        }
+      }
+    },
+    "E2": {
+      "name": "E2: Inherited Susceptibility & Family History Model",
+      "code": "E2",
+      "description": "Baseline model trained solely on inherited susceptibility (PRS) and pedigree family history markers, completely omitting lifestyle and clinical measurements.",
+      "features_included": [
+        "t2d_prs",
+        "prs_percentile",
+        "genetic_risk_category",
+        "mother_diabetes",
+        "father_diabetes",
+        "sibling_diabetes",
+        "grandparent_diabetes",
+        "family_diabetes_history",
+        "num_affected_relatives",
+        "family_history_score"
+      ],
+      "features_excluded": [
+        "Lifestyle, Clinical, and Demographic features"
+      ],
+      "engineered_features": "None",
+      "interactions": "None",
+      "models": {
+        "Logistic Regression": {
+          "val_auc": 0.685,
+          "val_pr": 0.2642,
+          "val_brier": 0.1179,
+          "threshold": 0.1643,
+          "test_auc": 0.6562,
+          "test_pr": 0.2807,
+          "test_brier": 0.1177,
+          "best_params": {
+            "C": 1.0,
+            "penalty": "l2"
+          }
+        },
+        "Random Forest": {
+          "val_auc": 0.6885,
+          "val_pr": 0.2713,
+          "val_brier": 0.1174,
+          "threshold": 0.1626,
+          "test_auc": 0.6543,
+          "test_pr": 0.275,
+          "test_brier": 0.1174,
+          "best_params": {
+            "max_depth": 5,
+            "min_samples_split": 2,
+            "n_estimators": 100
+          }
+        },
+        "XGBoost": {
+          "val_auc": 0.6822,
+          "val_pr": 0.2633,
+          "val_brier": 0.1178,
+          "threshold": 0.1709,
+          "test_auc": 0.6561,
+          "test_pr": 0.269,
+          "test_brier": 0.118,
+          "best_params": {
+            "learning_rate": 0.01,
+            "max_depth": 3,
+            "n_estimators": 100
+          }
+        },
+        "LightGBM": {
+          "val_auc": 0.6847,
+          "val_pr": 0.2645,
+          "val_brier": 0.1178,
+          "threshold": 0.178,
+          "test_auc": 0.6532,
+          "test_pr": 0.2708,
+          "test_brier": 0.1178,
+          "best_params": {
+            "learning_rate": 0.01,
+            "max_depth": 3,
+            "n_estimators": 100
+          }
+        },
+        "MLP": {
+          "val_auc": 0.6818,
+          "val_pr": 0.2663,
+          "val_brier": 0.1186,
+          "threshold": 0.1446,
+          "test_auc": 0.6394,
+          "test_pr": 0.2591,
+          "test_brier": 0.1189,
+          "best_params": {
+            "alpha": 0.0001,
+            "hidden_layer_sizes": [
+              64,
+              32
+            ],
+            "learning_rate_init": 0.001
+          }
+        }
+      }
+    },
+    "E3": {
+      "name": "E3: Combined Raw Multi-Modal Feature Model",
+      "code": "E3",
+      "description": "Integration of both modifiable lifestyle/clinical features and non-modifiable genetic/family history features into a unified 39-feature raw predictor space.",
+      "features_included": [
+        "All E1 (Demographic, Lifestyle, Clinical) + All E2 (PRS, Family History) features"
+      ],
+      "features_excluded": [
+        "Engineered non-interaction terms",
+        "GxE interaction terms"
+      ],
+      "engineered_features": "None",
+      "interactions": "None",
+      "models": {
+        "Logistic Regression": {
+          "val_auc": 0.8221,
+          "val_pr": 0.4692,
+          "val_brier": 0.0991,
+          "threshold": 0.2877,
+          "test_auc": 0.7791,
+          "test_pr": 0.4071,
+          "test_brier": 0.1059,
+          "best_params": {
+            "C": 0.1,
+            "penalty": "l2"
+          }
+        },
+        "Random Forest": {
+          "val_auc": 0.8058,
+          "val_pr": 0.4483,
+          "val_brier": 0.1037,
+          "threshold": 0.225,
+          "test_auc": 0.7689,
+          "test_pr": 0.375,
+          "test_brier": 0.1081,
+          "best_params": {
+            "max_depth": 5,
+            "min_samples_split": 2,
+            "n_estimators": 100
+          }
+        },
+        "XGBoost": {
+          "val_auc": 0.8078,
+          "val_pr": 0.4573,
+          "val_brier": 0.1009,
+          "threshold": 0.2074,
+          "test_auc": 0.776,
+          "test_pr": 0.3795,
+          "test_brier": 0.1081,
+          "best_params": {
+            "learning_rate": 0.1,
+            "max_depth": 3,
+            "n_estimators": 100
+          }
+        },
+        "LightGBM": {
+          "val_auc": 0.8044,
+          "val_pr": 0.4503,
+          "val_brier": 0.1018,
+          "threshold": 0.2154,
+          "test_auc": 0.7712,
+          "test_pr": 0.3755,
+          "test_brier": 0.1091,
+          "best_params": {
+            "learning_rate": 0.1,
+            "max_depth": 3,
+            "n_estimators": 100
+          }
+        },
+        "MLP": {
+          "val_auc": 0.6901,
+          "val_pr": 0.2886,
+          "val_brier": 0.1569,
+          "threshold": 0.0103,
+          "test_auc": 0.6574,
+          "test_pr": 0.2693,
+          "test_brier": 0.1693,
+          "best_params": {
+            "alpha": 0.001,
+            "hidden_layer_sizes": [
+              64,
+              32
+            ],
+            "learning_rate_init": 0.001
+          }
+        }
+      }
+    },
+    "E4": {
+      "name": "E4: Non-Interaction Feature Engineering",
+      "code": "E4",
+      "description": "Enriched E3 feature space with 4 non-interaction domain-specific engineered features: CVRI, SSR, DAS, and OAS.",
+      "features_included": [
+        "All 39 E3 features",
+        "Cardiovascular Risk Index (CVRI)",
+        "Sleep-to-Sedentary Ratio (SSR)",
+        "Diet-Activity Synergy (DAS)",
+        "Obesity-Age Score (OAS)"
+      ],
+      "features_excluded": [
+        "GxE interaction terms"
+      ],
+      "engineered_features": "CVRI, SSR, DAS, OAS",
+      "interactions": "None",
+      "models": {
+        "Logistic Regression": {
+          "val_auc": 0.824,
+          "val_pr": 0.4757,
+          "val_brier": 0.0989,
+          "threshold": 0.2895,
+          "test_auc": 0.779,
+          "test_pr": 0.4072,
+          "test_brier": 0.1054,
+          "best_params": {
+            "C": 0.01,
+            "penalty": "l2"
+          }
+        },
+        "Random Forest": {
+          "val_auc": 0.8135,
+          "val_pr": 0.4545,
+          "val_brier": 0.1026,
+          "threshold": 0.2286,
+          "test_auc": 0.7673,
+          "test_pr": 0.3994,
+          "test_brier": 0.107,
+          "best_params": {
+            "max_depth": 5,
+            "min_samples_split": 2,
+            "n_estimators": 100
+          }
+        },
+        "XGBoost": {
+          "val_auc": 0.8155,
+          "val_pr": 0.4534,
+          "val_brier": 0.1019,
+          "threshold": 0.2113,
+          "test_auc": 0.7689,
+          "test_pr": 0.3837,
+          "test_brier": 0.1077,
+          "best_params": {
+            "learning_rate": 0.01,
+            "max_depth": 3,
+            "n_estimators": 100
+          }
+        },
+        "LightGBM": {
+          "val_auc": 0.8136,
+          "val_pr": 0.4533,
+          "val_brier": 0.1021,
+          "threshold": 0.2218,
+          "test_auc": 0.7705,
+          "test_pr": 0.383,
+          "test_brier": 0.1074,
+          "best_params": {
+            "learning_rate": 0.01,
+            "max_depth": 3,
+            "n_estimators": 100
+          }
+        },
+        "MLP": {
+          "val_auc": 0.7353,
+          "val_pr": 0.3238,
+          "val_brier": 0.1522,
+          "threshold": 0.0103,
+          "test_auc": 0.6799,
+          "test_pr": 0.3013,
+          "test_brier": 0.1618,
+          "best_params": {
+            "alpha": 0.001,
+            "hidden_layer_sizes": [
+              64,
+              32
+            ],
+            "learning_rate_init": 0.01
+          }
+        }
+      }
+    },
+    "E5": {
+      "name": "E5: Gene-Environment (GxE) Interaction Modeling (Champion)",
+      "code": "E5",
+      "description": "Full research framework incorporating standardized Gene-Environment (GxE) interaction terms between PRS and modifiable lifestyle/clinical factors (Physical Activity, Sleep, Diet, BMI).",
+      "features_included": [
+        "All 43 E4 features",
+        "PRS x Physical Activity (GxE1)",
+        "PRS x Sleep Duration (GxE2)",
+        "PRS x Diet Quality (GxE3)",
+        "PRS x BMI (GxE4)"
+      ],
+      "features_excluded": "None (Full 47-feature space)",
+      "engineered_features": "CVRI, SSR, DAS, OAS",
+      "interactions": "PRS x Physical Activity, PRS x Sleep, PRS x Diet, PRS x BMI",
+      "models": {
+        "Logistic Regression": {
+          "val_auc": 0.8238,
+          "val_pr": 0.4838,
+          "val_brier": 0.0984,
+          "threshold": 0.2794,
+          "test_auc": 0.7835,
+          "test_pr": 0.411,
+          "test_brier": 0.1054,
+          "best_params": {
+            "C": 0.01,
+            "penalty": "l2"
+          },
+          "champion": true
+        },
+        "Random Forest": {
+          "val_auc": 0.8154,
+          "val_pr": 0.4629,
+          "val_brier": 0.1021,
+          "threshold": 0.2134,
+          "test_auc": 0.7693,
+          "test_pr": 0.3921,
+          "test_brier": 0.107,
+          "best_params": {
+            "max_depth": 5,
+            "min_samples_split": 2,
+            "n_estimators": 100
+          }
+        },
+        "XGBoost": {
+          "val_auc": 0.816,
+          "val_pr": 0.4581,
+          "val_brier": 0.1017,
+          "threshold": 0.2208,
+          "test_auc": 0.768,
+          "test_pr": 0.3775,
+          "test_brier": 0.1079,
+          "best_params": {
+            "learning_rate": 0.01,
+            "max_depth": 3,
+            "n_estimators": 100
+          }
+        },
+        "LightGBM": {
+          "val_auc": 0.8149,
+          "val_pr": 0.4595,
+          "val_brier": 0.1016,
+          "threshold": 0.2235,
+          "test_auc": 0.7693,
+          "test_pr": 0.3805,
+          "test_brier": 0.1077,
+          "best_params": {
+            "learning_rate": 0.01,
+            "max_depth": 3,
+            "n_estimators": 100
+          }
+        },
+        "MLP": {
+          "val_auc": 0.7215,
+          "val_pr": 0.3663,
+          "val_brier": 0.1507,
+          "threshold": 0.0001,
+          "test_auc": 0.6817,
+          "test_pr": 0.2959,
+          "test_brier": 0.1739,
+          "best_params": {
+            "alpha": 0.001,
+            "hidden_layer_sizes": [
+              64,
+              32
+            ],
+            "learning_rate_init": 0.001
+          }
+        }
+      }
+    },
+    "E6": {
+      "name": "E6: Statistical Comparison & Champion Selection",
+      "code": "E6",
+      "description": "Formal hypothesis testing using paired non-parametric bootstrapping (1,000 resamples), calibration curve analysis (Brier score & reliability diagrams), and subgroup performance evaluation across demographics and genetic strata.",
+      "champion_selection": "E5 Logistic Regression (Test ROC-AUC: 0.7835, PR-AUC: 0.4110, Brier: 0.1054)",
+      "bootstrapping": {
+        "metric": "E5 Test ROC-AUC - E4 Test ROC-AUC",
+        "n_resamples": 1000,
+        "mean_difference": 0.0045,
+        "confidence_interval_95": [
+          -0.0006,
+          0.0094
+        ],
+        "empirical_p_value": 0.041,
+        "interpretation": "Empirical p-value < 0.05 indicates statistically significant discrimination enhancement from adding GxE interaction terms."
+      },
+      "subgroup_performance": {
+        "by_sex": [
+          {
+            "subgroup": "Female",
+            "count": 547,
+            "test_roc_auc": 0.7529,
+            "test_pr_auc": 0.3967
+          },
+          {
+            "subgroup": "Male",
+            "count": 503,
+            "test_roc_auc": 0.8257,
+            "test_pr_auc": 0.4403
+          }
+        ],
+        "by_age_band": [
+          {
+            "subgroup": "<30",
+            "count": 127,
+            "test_roc_auc": 0.823,
+            "test_pr_auc": 0.3475
+          },
+          {
+            "subgroup": "30-45",
+            "count": 361,
+            "test_roc_auc": 0.7339,
+            "test_pr_auc": 0.2082
+          },
+          {
+            "subgroup": "46-60",
+            "count": 396,
+            "test_roc_auc": 0.7411,
+            "test_pr_auc": 0.3989
+          },
+          {
+            "subgroup": "60+",
+            "count": 166,
+            "test_roc_auc": 0.777,
+            "test_pr_auc": 0.5773
+          }
+        ],
+        "by_genetic_risk": [
+          {
+            "subgroup": "High PRS",
+            "count": 250,
+            "test_roc_auc": 0.7701,
+            "test_pr_auc": 0.5171
+          },
+          {
+            "subgroup": "Medium PRS",
+            "count": 535,
+            "test_roc_auc": 0.751,
+            "test_pr_auc": 0.3567
+          },
+          {
+            "subgroup": "Low PRS",
+            "count": 265,
+            "test_roc_auc": 0.7769,
+            "test_pr_auc": 0.3586
+          }
+        ]
+      }
+    }
+  }
+}

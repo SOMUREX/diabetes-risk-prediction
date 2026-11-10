@@ -1,0 +1,583 @@
+{
+  "explainer_type": "Exact Analytical Linear SHAP (Shapley Additive Explanations)",
+  "expected_value_log_odds": -2.29035,
+  "total_features": 57,
+  "top_features": [
+    {
+      "feature": "bmi",
+      "mean_abs_shap": 0.357576,
+      "coefficient": 0.444486,
+      "category": "Clinical",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "obesity_age_score",
+      "mean_abs_shap": 0.260266,
+      "coefficient": 0.319308,
+      "category": "Domain Engineered",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "waist_circumference",
+      "mean_abs_shap": 0.160375,
+      "coefficient": 0.205154,
+      "category": "Clinical",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "age",
+      "mean_abs_shap": 0.154155,
+      "coefficient": 0.189395,
+      "category": "Demographic",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "prs_percentile",
+      "mean_abs_shap": 0.133777,
+      "coefficient": 0.155613,
+      "category": "Inherited & Family History",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "t2d_prs",
+      "mean_abs_shap": 0.115793,
+      "coefficient": 0.144738,
+      "category": "Inherited & Family History",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "gxe_diet_quality",
+      "mean_abs_shap": 0.104989,
+      "coefficient": -0.154883,
+      "category": "Gene-Environment Interaction",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "sugary_drink_frequency",
+      "mean_abs_shap": 0.093663,
+      "coefficient": 0.110616,
+      "category": "Lifestyle",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "num_affected_relatives",
+      "mean_abs_shap": 0.090446,
+      "coefficient": 0.100785,
+      "category": "Inherited & Family History",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "family_history_score",
+      "mean_abs_shap": 0.080755,
+      "coefficient": 0.0941,
+      "category": "Inherited & Family History",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "triglycerides",
+      "mean_abs_shap": 0.08023,
+      "coefficient": 0.108396,
+      "category": "Clinical",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "diet_quality_score",
+      "mean_abs_shap": 0.070961,
+      "coefficient": -0.087689,
+      "category": "Lifestyle",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "smoking_pack_years",
+      "mean_abs_shap": 0.066156,
+      "coefficient": -0.092622,
+      "category": "Lifestyle",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "vegetable_intake",
+      "mean_abs_shap": 0.058249,
+      "coefficient": -0.073076,
+      "category": "Lifestyle",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "father_diabetes",
+      "mean_abs_shap": 0.057216,
+      "coefficient": 0.087555,
+      "category": "Inherited & Family History",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "gxe_sleep_duration",
+      "mean_abs_shap": 0.050453,
+      "coefficient": -0.075018,
+      "category": "Gene-Environment Interaction",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "gxe_physical_activity",
+      "mean_abs_shap": 0.048066,
+      "coefficient": -0.078575,
+      "category": "Gene-Environment Interaction",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "gxe_bmi",
+      "mean_abs_shap": 0.043546,
+      "coefficient": -0.063105,
+      "category": "Gene-Environment Interaction",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "diastolic_bp",
+      "mean_abs_shap": 0.041536,
+      "coefficient": 0.052837,
+      "category": "Clinical",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "smoking_status_Never",
+      "mean_abs_shap": 0.040418,
+      "coefficient": -0.100311,
+      "category": "Lifestyle",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "mother_diabetes",
+      "mean_abs_shap": 0.040105,
+      "coefficient": 0.061917,
+      "category": "Inherited & Family History",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "grandparent_diabetes",
+      "mean_abs_shap": 0.036635,
+      "coefficient": 0.047385,
+      "category": "Inherited & Family History",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "sleep_quality_score",
+      "mean_abs_shap": 0.035959,
+      "coefficient": -0.045145,
+      "category": "Lifestyle",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "moderate_activity_days",
+      "mean_abs_shap": 0.030296,
+      "coefficient": -0.036861,
+      "category": "Lifestyle",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "sedentary_hours_day",
+      "mean_abs_shap": 0.02992,
+      "coefficient": 0.038231,
+      "category": "Lifestyle",
+      "direction": "Risk-Increasing"
+    }
+  ],
+  "all_features": [
+    {
+      "feature": "bmi",
+      "mean_abs_shap": 0.357576,
+      "coefficient": 0.444486,
+      "category": "Clinical",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "obesity_age_score",
+      "mean_abs_shap": 0.260266,
+      "coefficient": 0.319308,
+      "category": "Domain Engineered",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "waist_circumference",
+      "mean_abs_shap": 0.160375,
+      "coefficient": 0.205154,
+      "category": "Clinical",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "age",
+      "mean_abs_shap": 0.154155,
+      "coefficient": 0.189395,
+      "category": "Demographic",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "prs_percentile",
+      "mean_abs_shap": 0.133777,
+      "coefficient": 0.155613,
+      "category": "Inherited & Family History",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "t2d_prs",
+      "mean_abs_shap": 0.115793,
+      "coefficient": 0.144738,
+      "category": "Inherited & Family History",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "gxe_diet_quality",
+      "mean_abs_shap": 0.104989,
+      "coefficient": -0.154883,
+      "category": "Gene-Environment Interaction",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "sugary_drink_frequency",
+      "mean_abs_shap": 0.093663,
+      "coefficient": 0.110616,
+      "category": "Lifestyle",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "num_affected_relatives",
+      "mean_abs_shap": 0.090446,
+      "coefficient": 0.100785,
+      "category": "Inherited & Family History",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "family_history_score",
+      "mean_abs_shap": 0.080755,
+      "coefficient": 0.0941,
+      "category": "Inherited & Family History",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "triglycerides",
+      "mean_abs_shap": 0.08023,
+      "coefficient": 0.108396,
+      "category": "Clinical",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "diet_quality_score",
+      "mean_abs_shap": 0.070961,
+      "coefficient": -0.087689,
+      "category": "Lifestyle",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "smoking_pack_years",
+      "mean_abs_shap": 0.066156,
+      "coefficient": -0.092622,
+      "category": "Lifestyle",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "vegetable_intake",
+      "mean_abs_shap": 0.058249,
+      "coefficient": -0.073076,
+      "category": "Lifestyle",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "father_diabetes",
+      "mean_abs_shap": 0.057216,
+      "coefficient": 0.087555,
+      "category": "Inherited & Family History",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "gxe_sleep_duration",
+      "mean_abs_shap": 0.050453,
+      "coefficient": -0.075018,
+      "category": "Gene-Environment Interaction",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "gxe_physical_activity",
+      "mean_abs_shap": 0.048066,
+      "coefficient": -0.078575,
+      "category": "Gene-Environment Interaction",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "gxe_bmi",
+      "mean_abs_shap": 0.043546,
+      "coefficient": -0.063105,
+      "category": "Gene-Environment Interaction",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "diastolic_bp",
+      "mean_abs_shap": 0.041536,
+      "coefficient": 0.052837,
+      "category": "Clinical",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "smoking_status_Never",
+      "mean_abs_shap": 0.040418,
+      "coefficient": -0.100311,
+      "category": "Lifestyle",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "mother_diabetes",
+      "mean_abs_shap": 0.040105,
+      "coefficient": 0.061917,
+      "category": "Inherited & Family History",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "grandparent_diabetes",
+      "mean_abs_shap": 0.036635,
+      "coefficient": 0.047385,
+      "category": "Inherited & Family History",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "sleep_quality_score",
+      "mean_abs_shap": 0.035959,
+      "coefficient": -0.045145,
+      "category": "Lifestyle",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "moderate_activity_days",
+      "mean_abs_shap": 0.030296,
+      "coefficient": -0.036861,
+      "category": "Lifestyle",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "sedentary_hours_day",
+      "mean_abs_shap": 0.02992,
+      "coefficient": 0.038231,
+      "category": "Lifestyle",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "stress_level",
+      "mean_abs_shap": 0.020431,
+      "coefficient": 0.026333,
+      "category": "Lifestyle",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "fruit_intake",
+      "mean_abs_shap": 0.019925,
+      "coefficient": -0.023349,
+      "category": "Lifestyle",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "alcohol_use",
+      "mean_abs_shap": 0.018554,
+      "coefficient": -0.020311,
+      "category": "Lifestyle",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "sleep_to_sedentary_ratio",
+      "mean_abs_shap": 0.017767,
+      "coefficient": -0.027807,
+      "category": "Domain Engineered",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "race_ethnicity_Hispanic",
+      "mean_abs_shap": 0.017718,
+      "coefficient": 0.102224,
+      "category": "Demographic",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "race_ethnicity_Black",
+      "mean_abs_shap": 0.017116,
+      "coefficient": -0.082311,
+      "category": "Demographic",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "whole_grain_intake",
+      "mean_abs_shap": 0.017048,
+      "coefficient": 0.020168,
+      "category": "Lifestyle",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "processed_food_frequency",
+      "mean_abs_shap": 0.016437,
+      "coefficient": -0.020748,
+      "category": "Lifestyle",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "cardiovascular_risk_index",
+      "mean_abs_shap": 0.01628,
+      "coefficient": 0.020667,
+      "category": "Domain Engineered",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "cholesterol",
+      "mean_abs_shap": 0.015593,
+      "coefficient": 0.018975,
+      "category": "Clinical",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "diet_activity_synergy",
+      "mean_abs_shap": 0.014592,
+      "coefficient": -0.019517,
+      "category": "Domain Engineered",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "smoking_status_Current",
+      "mean_abs_shap": 0.013603,
+      "coefficient": 0.059012,
+      "category": "Lifestyle",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "sleep_duration_hours",
+      "mean_abs_shap": 0.01341,
+      "coefficient": -0.016321,
+      "category": "Lifestyle",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "sex_Female",
+      "mean_abs_shap": 0.011728,
+      "coefficient": -0.023476,
+      "category": "Demographic",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "sex_Male",
+      "mean_abs_shap": 0.011561,
+      "coefficient": 0.023141,
+      "category": "Demographic",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "smoking_status_Former",
+      "mean_abs_shap": 0.01026,
+      "coefficient": 0.040963,
+      "category": "Lifestyle",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "genetic_risk_category_High",
+      "mean_abs_shap": 0.009848,
+      "coefficient": 0.026661,
+      "category": "Inherited & Family History",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "education_level",
+      "mean_abs_shap": 0.00975,
+      "coefficient": 0.011411,
+      "category": "Demographic",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "race_ethnicity_White",
+      "mean_abs_shap": 0.00875,
+      "coefficient": -0.025893,
+      "category": "Demographic",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "hypertension",
+      "mean_abs_shap": 0.008531,
+      "coefficient": 0.016632,
+      "category": "Clinical",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "physical_activity_minutes_week",
+      "mean_abs_shap": 0.007237,
+      "coefficient": -0.009631,
+      "category": "Lifestyle",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "family_diabetes_history",
+      "mean_abs_shap": 0.007127,
+      "coefficient": -0.007327,
+      "category": "Inherited & Family History",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "vigorous_activity_days",
+      "mean_abs_shap": 0.00612,
+      "coefficient": 0.007228,
+      "category": "Lifestyle",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "genetic_risk_category_Low",
+      "mean_abs_shap": 0.005954,
+      "coefficient": -0.015781,
+      "category": "Inherited & Family History",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "genetic_risk_category_Medium",
+      "mean_abs_shap": 0.005608,
+      "coefficient": -0.011216,
+      "category": "Inherited & Family History",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "income_level",
+      "mean_abs_shap": 0.004068,
+      "coefficient": 0.00752,
+      "category": "Demographic",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "systolic_bp",
+      "mean_abs_shap": 0.00376,
+      "coefficient": -0.004841,
+      "category": "Clinical",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "sibling_diabetes",
+      "mean_abs_shap": 0.002334,
+      "coefficient": 0.004775,
+      "category": "Inherited & Family History",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "race_ethnicity_South Asian",
+      "mean_abs_shap": 0.000912,
+      "coefficient": 0.001885,
+      "category": "Demographic",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "race_ethnicity_East Asian",
+      "mean_abs_shap": 0.00047,
+      "coefficient": -0.002144,
+      "category": "Demographic",
+      "direction": "Risk-Decreasing / Protective"
+    },
+    {
+      "feature": "race_ethnicity_Other",
+      "mean_abs_shap": 0.000422,
+      "coefficient": 0.005903,
+      "category": "Demographic",
+      "direction": "Risk-Increasing"
+    },
+    {
+      "feature": "alcohol_frequency",
+      "mean_abs_shap": 0.0,
+      "coefficient": 0.000335,
+      "category": "Lifestyle",
+      "direction": "Risk-Increasing"
+    }
+  ]
+}

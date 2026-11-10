@@ -1,0 +1,478 @@
+{
+  "categories": [
+    {
+      "id": "demographics",
+      "name": "Demographic Information",
+      "description": "Baseline non-modifiable demographic factors influencing baseline population diabetes prevalence.",
+      "fields": [
+        {
+          "name": "age",
+          "label": "Age",
+          "type": "integer",
+          "unit": "years",
+          "min": 18,
+          "max": 90,
+          "default": 45,
+          "required": true,
+          "tooltip": "Age in years. Type-2 Diabetes incidence strongly escalates after age 45 due to progressive pancreatic beta-cell dysfunction."
+        },
+        {
+          "name": "sex",
+          "label": "Biological Sex",
+          "type": "select",
+          "options": [
+            "Male",
+            "Female"
+          ],
+          "default": "Male",
+          "required": true,
+          "tooltip": "Biological sex recorded at baseline."
+        },
+        {
+          "name": "race_ethnicity",
+          "label": "Race / Ethnicity",
+          "type": "select",
+          "options": [
+            "White",
+            "South Asian",
+            "East Asian",
+            "Black",
+            "Hispanic",
+            "Other"
+          ],
+          "default": "South Asian",
+          "required": true,
+          "tooltip": "Self-reported race or ethnic background. Certain populations (e.g. South Asian) exhibit higher diabetes predisposition at lower BMIs."
+        },
+        {
+          "name": "education_level",
+          "label": "Education Level",
+          "type": "select",
+          "options": [
+            "Primary or below",
+            "Secondary",
+            "Undergraduate",
+            "Postgraduate"
+          ],
+          "default": "Undergraduate",
+          "required": true,
+          "tooltip": "Highest level of formal educational attainment, acting as a socio-economic determinant."
+        },
+        {
+          "name": "income_level",
+          "label": "Household Income Tier",
+          "type": "select",
+          "options": [
+            "Low",
+            "Middle",
+            "High"
+          ],
+          "default": "Middle",
+          "required": true,
+          "tooltip": "Relative household socioeconomic income stratum."
+        }
+      ]
+    },
+    {
+      "id": "genetic",
+      "name": "Inherited Susceptibility (PRS)",
+      "description": "Synthetic Polygenic Risk Score (PRS) representing aggregate inherited polygenic liability. (Not an actual clinical genetic test).",
+      "fields": [
+        {
+          "name": "t2d_prs",
+          "label": "Type-2 Diabetes PRS (Z-score)",
+          "type": "float",
+          "unit": "standard deviations",
+          "min": -4.0,
+          "max": 4.0,
+          "step": 0.05,
+          "default": 0.0,
+          "required": true,
+          "tooltip": "Polygenic Risk Score normalized as a Z-score (Mean ~ 0, SD ~ 1). Values > 1.0 indicate top quartile genetic susceptibility."
+        },
+        {
+          "name": "prs_percentile",
+          "label": "PRS Population Percentile",
+          "type": "float",
+          "unit": "%",
+          "min": 0.1,
+          "max": 99.9,
+          "step": 0.1,
+          "default": 50.0,
+          "required": true,
+          "tooltip": "Synthetic population rank of genetic susceptibility (0% to 100%)."
+        },
+        {
+          "name": "genetic_risk_category",
+          "label": "Genetic Risk Category",
+          "type": "select",
+          "options": [
+            "Low",
+            "Medium",
+            "High"
+          ],
+          "default": "Medium",
+          "required": true,
+          "tooltip": "Categorical partition: Low (<20th percentile), Medium (20th-80th percentile), High (>80th percentile)."
+        }
+      ]
+    },
+    {
+      "id": "family_history",
+      "name": "Family History & Pedigree Risk",
+      "description": "Recorded parental, sibling, and second-degree pedigree occurrences of diagnosed Type-2 Diabetes.",
+      "fields": [
+        {
+          "name": "mother_diabetes",
+          "label": "Mother with Diabetes",
+          "type": "radio_boolean",
+          "default": 0,
+          "required": true,
+          "tooltip": "Does the participant's biological mother have diagnosed Type-2 Diabetes?"
+        },
+        {
+          "name": "father_diabetes",
+          "label": "Father with Diabetes",
+          "type": "radio_boolean",
+          "default": 0,
+          "required": true,
+          "tooltip": "Does the participant's biological father have diagnosed Type-2 Diabetes?"
+        },
+        {
+          "name": "sibling_diabetes",
+          "label": "Sibling with Diabetes",
+          "type": "radio_boolean",
+          "default": 0,
+          "required": true,
+          "tooltip": "Does any biological sibling have diagnosed Type-2 Diabetes?"
+        },
+        {
+          "name": "grandparent_diabetes",
+          "label": "Grandparent with Diabetes",
+          "type": "radio_boolean",
+          "default": 0,
+          "required": true,
+          "tooltip": "Did any biological maternal or paternal grandparent have Type-2 Diabetes?"
+        },
+        {
+          "name": "family_diabetes_history",
+          "label": "Any Family Diabetes History",
+          "type": "radio_boolean",
+          "default": 0,
+          "required": true,
+          "tooltip": "Positive indicator if at least one first- or second-degree relative has diabetes."
+        },
+        {
+          "name": "num_affected_relatives",
+          "label": "Number of Affected Relatives",
+          "type": "integer",
+          "unit": "relatives",
+          "min": 0,
+          "max": 6,
+          "default": 0,
+          "required": true,
+          "tooltip": "Total count of first- and second-degree biological relatives diagnosed with diabetes."
+        },
+        {
+          "name": "family_history_score",
+          "label": "Weighted Family History Score",
+          "type": "float",
+          "unit": "points",
+          "min": 0.0,
+          "max": 6.0,
+          "step": 0.5,
+          "default": 0.0,
+          "required": true,
+          "tooltip": "Pedigree-weighted metric: 1.0 per affected parent/sibling, 0.5 per affected grandparent."
+        }
+      ]
+    },
+    {
+      "id": "lifestyle",
+      "name": "Modifiable Lifestyle Factors",
+      "description": "Daily physical activity, sleep patterns, dietary habits, smoking, alcohol, and perceived psychological stress.",
+      "fields": [
+        {
+          "name": "physical_activity_minutes_week",
+          "label": "Physical Activity",
+          "type": "number",
+          "unit": "min/week",
+          "min": 0,
+          "max": 1000,
+          "default": 150,
+          "required": true,
+          "tooltip": "Total minutes of moderate-to-vigorous physical exercise per week. WHO guideline recommended minimum is 150 min/week."
+        },
+        {
+          "name": "moderate_activity_days",
+          "label": "Moderate Activity Days",
+          "type": "slider",
+          "unit": "days/week",
+          "min": 0,
+          "max": 7,
+          "default": 3,
+          "required": true,
+          "tooltip": "Days per week engaging in moderate aerobic physical activity (e.g., brisk walking, cycling)."
+        },
+        {
+          "name": "vigorous_activity_days",
+          "label": "Vigorous Activity Days",
+          "type": "slider",
+          "unit": "days/week",
+          "min": 0,
+          "max": 7,
+          "default": 1,
+          "required": true,
+          "tooltip": "Days per week engaging in vigorous exercise (e.g., running, heavy resistance training)."
+        },
+        {
+          "name": "sedentary_hours_day",
+          "label": "Sedentary Screen / Sitting Time",
+          "type": "float",
+          "unit": "hours/day",
+          "min": 0.0,
+          "max": 18.0,
+          "step": 0.5,
+          "default": 6.5,
+          "required": true,
+          "tooltip": "Average daily waking hours spent sitting or reclining."
+        },
+        {
+          "name": "sleep_duration_hours",
+          "label": "Sleep Duration",
+          "type": "float",
+          "unit": "hours/night",
+          "min": 3.0,
+          "max": 14.0,
+          "step": 0.5,
+          "default": 7.0,
+          "required": true,
+          "tooltip": "Average nightly sleep duration. 7 to 8 hours is associated with optimal insulin sensitivity."
+        },
+        {
+          "name": "sleep_quality_score",
+          "label": "Sleep Quality Score",
+          "type": "slider",
+          "unit": "/100",
+          "min": 0,
+          "max": 100,
+          "default": 70,
+          "required": true,
+          "tooltip": "Subjective sleep quality index based on sleep continuity and restfulness (0-100)."
+        },
+        {
+          "name": "fruit_intake",
+          "label": "Fruit Intake",
+          "type": "float",
+          "unit": "servings/day",
+          "min": 0.0,
+          "max": 8.0,
+          "step": 0.5,
+          "default": 2.0,
+          "required": true,
+          "tooltip": "Daily servings of fresh, unprocessed whole fruits."
+        },
+        {
+          "name": "vegetable_intake",
+          "label": "Vegetable Intake",
+          "type": "float",
+          "unit": "servings/day",
+          "min": 0.0,
+          "max": 10.0,
+          "step": 0.5,
+          "default": 3.0,
+          "required": true,
+          "tooltip": "Daily servings of non-starchy green and colored vegetables."
+        },
+        {
+          "name": "whole_grain_intake",
+          "label": "Whole Grain Intake",
+          "type": "float",
+          "unit": "servings/day",
+          "min": 0.0,
+          "max": 8.0,
+          "step": 0.5,
+          "default": 2.0,
+          "required": true,
+          "tooltip": "Daily servings of complex whole grain foods (oats, brown rice, whole wheat)."
+        },
+        {
+          "name": "processed_food_frequency",
+          "label": "Ultra-Processed Food Intake",
+          "type": "slider",
+          "unit": "servings/day",
+          "min": 0,
+          "max": 7,
+          "default": 2,
+          "required": true,
+          "tooltip": "Daily servings of ultra-processed packaged meals, fast foods, or refined snacks."
+        },
+        {
+          "name": "sugary_drink_frequency",
+          "label": "Sugary Drink Intake",
+          "type": "slider",
+          "unit": "drinks/day",
+          "min": 0,
+          "max": 6,
+          "default": 1,
+          "required": true,
+          "tooltip": "Daily consumption of sugar-sweetened beverages or sodas."
+        },
+        {
+          "name": "diet_quality_score",
+          "label": "Diet Quality Score",
+          "type": "slider",
+          "unit": "/100",
+          "min": 0,
+          "max": 100,
+          "default": 60,
+          "required": true,
+          "tooltip": "Composite dietary adherence score reflecting healthy dietary patterns (0-100)."
+        },
+        {
+          "name": "smoking_status",
+          "label": "Smoking Status",
+          "type": "select",
+          "options": [
+            "Never",
+            "Former",
+            "Current"
+          ],
+          "default": "Never",
+          "required": true,
+          "tooltip": "Smoking history status."
+        },
+        {
+          "name": "smoking_pack_years",
+          "label": "Smoking Pack-Years",
+          "type": "float",
+          "unit": "pack-years",
+          "min": 0.0,
+          "max": 80.0,
+          "step": 1.0,
+          "default": 0.0,
+          "required": true,
+          "tooltip": "Cumulative smoking exposure: (packs smoked per day) x (years smoked). 0 for never-smokers."
+        },
+        {
+          "name": "alcohol_use",
+          "label": "Alcohol Consumption",
+          "type": "radio_boolean",
+          "default": 1,
+          "required": true,
+          "tooltip": "Does the participant consume alcoholic beverages?"
+        },
+        {
+          "name": "alcohol_frequency",
+          "label": "Alcohol Frequency",
+          "type": "select",
+          "options": [
+            "None",
+            "Rare",
+            "Social",
+            "Frequent"
+          ],
+          "default": "Social",
+          "required": true,
+          "tooltip": "Frequency of alcoholic beverage intake."
+        },
+        {
+          "name": "stress_level",
+          "label": "Perceived Stress Level",
+          "type": "slider",
+          "unit": "/100",
+          "min": 0,
+          "max": 100,
+          "default": 45,
+          "required": true,
+          "tooltip": "Self-reported chronic psychological stress index (0-100)."
+        }
+      ]
+    },
+    {
+      "id": "clinical",
+      "name": "Clinical & Anthropometric Parameters",
+      "description": "Standard objective clinical indicators, including anthropometrics, hemodynamics, and serum lipid panels.",
+      "fields": [
+        {
+          "name": "bmi",
+          "label": "Body Mass Index (BMI)",
+          "type": "float",
+          "unit": "kg/m\u00b2",
+          "min": 14.0,
+          "max": 55.0,
+          "step": 0.1,
+          "default": 26.5,
+          "required": true,
+          "tooltip": "Weight in kilograms divided by height in meters squared (kg/m\u00b2). Key risk driver."
+        },
+        {
+          "name": "waist_circumference",
+          "label": "Waist Circumference",
+          "type": "float",
+          "unit": "cm",
+          "min": 50.0,
+          "max": 160.0,
+          "step": 0.5,
+          "default": 86.0,
+          "required": true,
+          "tooltip": "Abdominal visceral adiposity measurement in centimeters."
+        },
+        {
+          "name": "systolic_bp",
+          "label": "Systolic Blood Pressure",
+          "type": "number",
+          "unit": "mmHg",
+          "min": 80,
+          "max": 220,
+          "default": 122,
+          "required": true,
+          "tooltip": "Upper resting blood pressure reading in mmHg."
+        },
+        {
+          "name": "diastolic_bp",
+          "label": "Diastolic Blood Pressure",
+          "type": "number",
+          "unit": "mmHg",
+          "min": 50,
+          "max": 130,
+          "default": 78,
+          "required": true,
+          "tooltip": "Lower resting blood pressure reading in mmHg."
+        },
+        {
+          "name": "hypertension",
+          "label": "Diagnosed Hypertension",
+          "type": "radio_boolean",
+          "default": 0,
+          "required": true,
+          "tooltip": "Clinical history or ongoing medical diagnosis of hypertension."
+        },
+        {
+          "name": "cholesterol",
+          "label": "Total Serum Cholesterol",
+          "type": "float",
+          "unit": "mg/dL",
+          "min": 100.0,
+          "max": 380.0,
+          "step": 1.0,
+          "default": 195.0,
+          "required": true,
+          "tooltip": "Total circulating blood cholesterol in mg/dL."
+        },
+        {
+          "name": "triglycerides",
+          "label": "Serum Triglycerides",
+          "type": "float",
+          "unit": "mg/dL",
+          "min": 40.0,
+          "max": 500.0,
+          "step": 1.0,
+          "default": 140.0,
+          "required": true,
+          "tooltip": "Fasting blood serum triglycerides in mg/dL."
+        }
+      ]
+    }
+  ]
+}
