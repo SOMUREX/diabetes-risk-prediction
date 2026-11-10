@@ -1,7 +1,22 @@
 # DiabeteRisk.AI — Multi-Modal Type-2 Diabetes Risk Prediction Platform
 
 > **Academic Final-Year Capstone Project — Review III Demonstration**  
-> **Project Title:** *Inherited-Susceptibility–Aware Lifestyle Risk Modelling for Personalized Type-2 Diabetes Prediction Using Machine Learning and Deep Learning*
+> **Project Title:** *Inherited-Susceptibility–Aware Lifestyle Risk Modelling for Personalized Type-2 Diabetes Prediction Using Machine Learning and Deep Learning*  
+> **GitHub Repository:** [https://github.com/SOMUREX/diabetes-risk-prediction](https://github.com/SOMUREX/diabetes-risk-prediction)
+
+---
+
+## 🌐 Live Application & Access Links
+
+| Service | Access Link | Description |
+| :--- | :--- | :--- |
+| **Integrated Web Application** | [http://localhost:8000](http://localhost:8000) | Complete unified UI (React + FastAPI) running on a single port |
+| **React Development Server** | [http://localhost:3000](http://localhost:3000) | Vite frontend with hot-module reload & API proxying |
+| **Interactive API Documentation** | [http://localhost:8000/docs](http://localhost:8000/docs) | Live Swagger UI for testing all prediction endpoints |
+| **System Health Check** | [http://localhost:8000/api/health](http://localhost:8000/api/health) | Live JSON health & pipeline verification endpoint |
+| **GitHub Source Code** | [https://github.com/SOMUREX/diabetes-risk-prediction](https://github.com/SOMUREX/diabetes-risk-prediction) | Public source code, datasets, model weights & notebooks |
+
+*(When deployed to cloud services such as Render, Railway, or Hugging Face Spaces, replace `localhost` with your production URL, e.g. `https://diabetes-risk-ai.onrender.com`)*
 
 ---
 
